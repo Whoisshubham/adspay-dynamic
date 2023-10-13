@@ -20,39 +20,39 @@
         href="{{ asset('/') }}admin/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/') }}admin/vendors/styles/style.css" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
-        crossorigin="anonymous"></script>
-    {{-- <script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
+    <style>
+        .toster {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            width: 300px;
+            height: 60px;
+            z-index: 1111;
+            justify-content: center;
+            padding-top: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
 
-			gtag("config", "G-GBZ3SGGX85");
-		</script> --}}
-    {{-- <!-- Google Tag Manager -->
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != "dataLayer" ? "&l=" + l : "";
-				j.async = true;
-				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-		</script>
-		<!-- End Google Tag Manager --> --}}
+        .toster>h4 {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     @include('admin.layouts.nav')
     @include('admin.layouts.modalpopup')
-    @yield('content')
+    @if (session('message'))
+        <div class="toster" style="background-color: rgba(49, 192, 49, 0.945)">
+            <h4>{{ session('message') }}</h4>
+        </div>
+    @endif
+    <div class="main-container">
+        <div class="xs-pd-20-10 pd-ltr-20">
+            @yield('content')
+        </div>
+    </div>
     <!-- js -->
     <script src="{{ asset('/') }}admin/vendors/scripts/core.js"></script>
     <script src="{{ asset('/') }}admin/vendors/scripts/script.min.js"></script>
@@ -64,11 +64,12 @@
     <script src="{{ asset('/') }}admin/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
     <script src="{{ asset('/') }}admin/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
     <script src="{{ asset('/') }}admin/vendors/scripts/dashboard3.js"></script>
-    <script src="{{asset('admin/modals.js')}}"></script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
-            style="display: none; visibility: hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <script src="{{ asset('admin/modals.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
 </body>
 
 </html>

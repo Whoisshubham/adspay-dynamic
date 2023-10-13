@@ -207,3 +207,35 @@ function numbersonly(e) {
             return false //disable key press
     }
 }
+
+
+
+$('.submitForm').on('submit', function (e) {
+
+    e.preventDefault();
+    $.ajax({
+        url: $(this).attr("action"),
+        type: $(this).attr("method"),
+        dataType: "JSON",
+        data: new FormData(this),
+        processData: false,
+        contentType: false,
+        success: function (data) {
+
+            if (data.responseCode == "200") {
+                toastr.success(data.responseMessage);
+                setTimeout(function () {
+                    window.location.href = data.responseUrl;
+                }, 1000);
+            } else if (data.responseCode == "403") {
+                toastr.error(data.responseMessage);
+
+
+            } else {
+                toastr.error("Somthing Went Wrong!")
+            }
+
+
+        }
+    });
+});

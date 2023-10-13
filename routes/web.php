@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserFormController;
+use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\Website\ContactUsController;
+use App\Http\Controllers\Website\TeamController;
+use App\Http\Controllers\Website\TestimonialController;
 use App\Http\Controllers\Website\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,14 +19,41 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::group(['middleware' => 'AuthUser'], function () {
+    Route::get('admin/dashboard', [DashboardController::class, 'index']);
 
-Route::get('user/datalist',[DashboardController::class,'index']);
-Route::get('user/list',[UserFormController::class,'index']);
-Route::Post('user/formSubmit',[UserFormController::class,'formSubmit']);
-Route::get('user/card/{id}',[UserFormController::class,'card']);
-Route::get('user/show-card/{id}',[UserFormController::class,'showCardDetails']);
-Route::Post('user/formSubmit/{id}',[UserFormController::class,'cardSubmit']);
-Route::get('user/data-list/delete/{id}',[UserFormController::class,'delete']);
+    Route::get('admin/contact-us', [ContactUsController::class, 'contactGet']);
+    Route::get('admin/contact/delete/{id}', [ContactUsController::class, 'contactDelete']);
 
+
+    #testimonial
+    Route::get('admin/testimonial', [TestimonialController::class, 'index']);
+    Route::post('admin/testimonial/store', [TestimonialController::class, 'store']);
+    Route::get('admin/testimonial/delete/{id}', [TestimonialController::class, 'delete']);
+
+
+    #Our Team
+    Route::get('admin/team', [TeamController::class, 'index']);
+    Route::post('admin/team/store', [TeamController::class, 'store']);
+    Route::get('admin/team/delete/{id}', [TeamController::class, 'delete']);
+});
+
+# Basic Routes
 Route::get('/', [WebsiteController::class, 'index']);
-Route::get('/one/{title}', [WebsiteController::class, 'applyCard']);
+Route::get('/contact', [WebsiteController::class, 'contact']);
+Route::get('/about', [WebsiteController::class, 'about']);
+Route::get('/service', [WebsiteController::class, 'service']);
+
+# Contact Us
+Route::post('contact_us', [ContactUsController::class, 'store']);
+
+
+# For Admin
+Route::get('/admin/login', [AdminLoginController::class, 'login']);
+Route::post('admin-login-check', [AdminLoginController::class, "loginAuth"]);
+Route::get('logout', [AdminLoginController::class, "logout"]);
+Route::get('cache/{id}', function ($id) {
+    \Artisan::call($id);
+
+    dd($id . " Run Succesfully!");
+});

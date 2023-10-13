@@ -1,15 +1,4 @@
-<div class="pre-loader">
-    <div class="pre-loader-box">
-        <div class="loader-logo">
-            <img src="{{asset('/')}}admin/vendors/images/deskapp-logo.svg" alt="" />
-        </div>
-        <div class="loader-progress" id="progress_div">
-            <div class="bar" id="bar1"></div>
-        </div>
-        <div class="percent" id="percent1">0%</div>
-        <div class="loading-text">Loading...</div>
-    </div>
-</div>
+
 
 <div class="header">
     <div class="header-left">
@@ -193,17 +182,13 @@
                     <a class="dropdown-item" href="faq.html"
                         ><i class="dw dw-help"></i> Help</a
                     >
-                    <a class="dropdown-item" href="login.html"
+                    <a class="dropdown-item" href="{{url('logout')}}"
                         ><i class="dw dw-logout"></i> Log Out</a
                     >
                 </div>
             </div>
         </div>
-        <div class="github-link">
-            <a href="https://github.com/dropways/deskapp" target="_blank"
-                ><img src="{{asset('/')}}admin/vendors/images/github.svg" alt=""
-            /></a>
-        </div>
+
     </div>
 </div>
 
@@ -380,12 +365,14 @@
 <div class="left-side-bar">
     <div class="brand-logo">
         <a href="index.html">
-            <img src="{{asset('/')}}admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+
+           <h4 class="text-dark"> Logo</h4>
+            {{-- <img src="{{asset('/')}}admin/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
             <img
                 src="vendors/images/deskapp-logo-white.svg"
                 alt=""
                 class="light-logo"
-            />
+            /> --}}
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">
             <i class="ion-close-round"></i>

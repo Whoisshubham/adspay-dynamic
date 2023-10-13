@@ -20,7 +20,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('user/formSubmit', [UserController::class, 'formSubmit']);
-Route::post('user/cardSubmit/{id}', [UserController::class, 'cardSubmit']);
-Route::post('user/message/{id}',[UserController::class,'messages']);
-Route::post('user/messases',[UserController::class,'messasesShow']);

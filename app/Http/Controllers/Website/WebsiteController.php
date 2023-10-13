@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Team;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -10,10 +12,18 @@ class WebsiteController extends Controller
     public function index()
     {
 
-        return view('welcome');
+        $testmonialList=Testimonial::orderBy("ID","DESC")->get();
+        return view('index',compact('testmonialList'));
 
     }
-    public function applyCard($title){
-        return view('applynow',compact('title'));
+    public function contact(){
+        return view('contact');
+    }
+    public function about(){
+        $teamList=Team::orderBy('ID',"DESC")->get();
+        return view('about',compact('teamList'));
+    }
+    public function service(){
+        return view('service');
     }
 }
