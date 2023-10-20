@@ -164,7 +164,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-mobile"></i> </div>
-                            <h4><a href="">Mobile Marketing</a></h4>
+                            <h4><a href="{{url('service')}}">Mobile Marketing</a></h4>
                             <p>Mobile Marketing
                                 Promotion in terms of content via. SMS, Push Notifications, Banners, App Downloads Or In
                                 Game / Video advertisement.</p>
@@ -174,7 +174,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-link"></i></div>
-                            <h4><a href="">Affiliate Marketing</a></h4>
+                            <h4><a href="{{url('service')}}">Affiliate Marketing</a></h4>
                             <p>Specialized in BFSI, Real Estate, E-Commerce, FMCG & Educational campaigns with 500+ Partners
                                 across India.</p>
                         </div>
@@ -183,7 +183,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-bullhorn"></i></div>
-                            <h4><a href="">Social Media
+                            <h4><a href="{{url('service')}}">Social Media
                                     Marketing</a></h4>
                             <p>We are specialized in paid social media. We've honed our expertise to become masters in this
                                 dynamic field. </p>
@@ -193,7 +193,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-cogs"></i></div>
-                            <h4><a href="">Programmatic</a></h4>
+                            <h4><a href="{{url('service')}}">Programmatic</a></h4>
                             <p>Real time automated bid helps you to show ad to specific customer in a specific context.</p>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-user"></i></div>
-                            <h4><a href="">Influencer Marketing</a></h4>
+                            <h4><a href="{{url('service')}}">Influencer Marketing</a></h4>
                             <p>Influencer marketing enables brands to leverage the power of Word of Mouth through social
                                 media platforms such as Twitter, Facebook, Youtube, Vine and Instagram etc.</p>
                         </div>
@@ -210,7 +210,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box">
                             <div class="icon"><i class="fas fa-chart-line"></i></div>
-                            <h4><a href="">Performance Marketing</a></h4>
+                            <h4><a href="{{url('service')}}">Performance Marketing</a></h4>
                             <p>Performance-Based marketing is a form of advertising in which the advertiser only pays once
                                 qualifying acquisitions have taken place.</p>
                         </div>

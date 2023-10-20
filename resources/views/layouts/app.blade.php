@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Services</title>
+    <title>Ads pay media</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
 
 </head>
 
@@ -48,10 +49,11 @@
                 <ul>
                     <li><a class="nav-link scrollto " href="{{url('/')}}">Home</a></li>
                     <li><a class="nav-link scrollto " href="{{url('about')}}">About</a></li>
-                    <li><a class="nav-link scrollto active" href="{{url('service')}}">Services</a></li>
-                    <!-- <li><a class="nav-link scrollto" href="">Our Team</a></li> -->
-                    <li><a class="nav-link scrollto" href="">Advertisers</a></li>
-                    <li><a class="nav-link scrollto" href="">Publishers</a></li>
+                    <li><a class="nav-link scrollto " href="{{url('service')}}">Services</a></li>
+                    <li><a class="nav-link scrollto" href="{{url('career')}}">Career</a></li>
+                    <li><a class="nav-link scrollto" href="https://affiliates.adspaymedia.com/advertiser_signup">Advertiser</a></li>
+                    <li><a class="nav-link scrollto" href="https://affiliates.adspaymedia.com/signup">Publishers</a></li>
+                    <li><a class="nav-link scrollto " href="{{url('life')}}">Life at adspaymedia</a></li>
                     <li><a class="nav-link scrollto " href="{{url('contact')}}">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -84,7 +86,7 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{url('about')}}">About us</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('term&service')}}">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('policy')}}">Terms of service</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{url('policy')}}">Privacy policy</a></li>
                         </ul>
                     </div>
@@ -92,11 +94,11 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Affiliate Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Social Media Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Influencer Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Performance</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Mobile Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Affiliate Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Social Media Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Influencer Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{url('service')}}">Performance</a></li>
                         </ul>
                     </div>
 

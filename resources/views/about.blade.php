@@ -2,7 +2,7 @@
 @section('content')
     <section id="hero2" class="d-flex align-items-center">
         <div class="container">
-            <h1>About Us</h1>
+            <h1 id=''>About Us</h1>
             <h3>We engage positive communication of recipients with your brand.</h3>
             <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
         </div>

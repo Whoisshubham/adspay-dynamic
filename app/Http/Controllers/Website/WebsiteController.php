@@ -26,4 +26,15 @@ class WebsiteController extends Controller
     public function service(){
         return view('service');
     }
+    public function career(){
+        return view('career');
+    }
+
+    public function policy(){
+        return view('policy');
+    }
+
+    public function life(){
+        return view('life');
+    }
 }

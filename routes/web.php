@@ -43,6 +43,10 @@ Route::get('/', [WebsiteController::class, 'index']);
 Route::get('/contact', [WebsiteController::class, 'contact']);
 Route::get('/about', [WebsiteController::class, 'about']);
 Route::get('/service', [WebsiteController::class, 'service']);
+// Route::get('/career',function(){return view('career');});
+Route::get('/career', [WebsiteController::class, 'career']);
+Route::get('/policy', [WebsiteController::class, 'policy']);
+Route::get('/life', [WebsiteController::class, 'life']);
 
 # Contact Us
 Route::post('contact_us', [ContactUsController::class, 'store']);

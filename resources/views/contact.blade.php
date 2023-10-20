@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact"><br><br>
         <div class="container">
 
             <div class="section-title">
