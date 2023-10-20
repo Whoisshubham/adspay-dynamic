@@ -34,5 +34,14 @@
 
             </ul>
         </li>
+        <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">
+                <span class="micon bi bi-command"></span><span class="mtext">Gallery</span>
+            </a>
+            <ul class="submenu">
+                <li><a href="{{ url('admin/gallery') }}">Gallery Management</a></li>
+
+            </ul>
+        </li>
     </ul>
 </div>

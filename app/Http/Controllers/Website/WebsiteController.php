@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use App\Models\Team;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -35,6 +36,7 @@ class WebsiteController extends Controller
     }
 
     public function life(){
-        return view('life');
+        $getGallery=Gallery::orderBy('ID','DESC')->get();
+        return view('life',compact('getGallery'));
     }
 }

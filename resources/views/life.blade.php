@@ -52,9 +52,11 @@
         </div> -->
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+@foreach ($getGallery as $galery)
+
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D&w=1000" class="img-fluid" alt="">
+            <img src="{{asset($galery->image ?? null)}}" class="img-fluid" alt="">
             <!-- <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
@@ -63,29 +65,11 @@
             </div> -->
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D&w=1000" class="img-fluid" alt="">
-            <!-- <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div> -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D&w=1000" class="img-fluid" alt="">
-            <!-- <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div> -->
-          </div>
+          @endforeach
 
         </div>
 
       </div>
     </section><!-- End Portfolio Section -->
-        
+
 @endsection

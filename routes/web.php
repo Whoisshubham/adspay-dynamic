@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserFormController;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\TeamController;
 use App\Http\Controllers\Website\TestimonialController;
@@ -26,7 +28,7 @@ Route::group(['middleware' => 'AuthUser'], function () {
     Route::get('admin/contact/delete/{id}', [ContactUsController::class, 'contactDelete']);
 
 
-    #testimonial
+    #Testimonial
     Route::get('admin/testimonial', [TestimonialController::class, 'index']);
     Route::post('admin/testimonial/store', [TestimonialController::class, 'store']);
     Route::get('admin/testimonial/delete/{id}', [TestimonialController::class, 'delete']);
@@ -36,6 +38,16 @@ Route::group(['middleware' => 'AuthUser'], function () {
     Route::get('admin/team', [TeamController::class, 'index']);
     Route::post('admin/team/store', [TeamController::class, 'store']);
     Route::get('admin/team/delete/{id}', [TeamController::class, 'delete']);
+
+    #Gallery Management
+    Route::get('admin/gallery', [GalleryController::class, 'index']);
+    Route::post('admin/gallery/store', [GalleryController::class, 'store']);
+    Route::get('admin/gallery/delete/{id}', [GalleryController::class, 'delete']);
+
+    #Profile Section
+    Route::get('admin/profile', [ProfileController::class,'index']);
+    Route::post('admin/profile-update', [ProfileController::class,'update']);
+
 });
 
 # Basic Routes
